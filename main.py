@@ -43,7 +43,7 @@ def main():
                 return
             for bullet in shots:
                 if bullet.collision(entity):
-                    entity.kill()
+                    entity.split()
                     bullet.kill()
         
         for entity in drawable:
