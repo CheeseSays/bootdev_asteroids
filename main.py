@@ -41,6 +41,10 @@ def main():
                 print("Game Over!")
                 pygame.QUIT
                 return
+            for bullet in shots:
+                if bullet.collision(entity):
+                    entity.kill()
+                    bullet.kill()
         
         for entity in drawable:
             entity.draw(screen)
