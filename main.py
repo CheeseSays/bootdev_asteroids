@@ -31,6 +31,12 @@ def main():
 
         for entity in updatable:
             entity.update(dt)
+
+        for entity in asteroids:
+            if player.collision(entity):
+                print("Game Over!")
+                pygame.QUIT
+                return
         
         for entity in drawable:
             entity.draw(screen)
